@@ -21,14 +21,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost/devi/php-file-uploader/example-upload.php",
+					"raw": "http://localhost/devi/php-file-uploader-master/example-upload.php",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"devi",
-						"php-file-uploader",
+						"php-file-uploader-master",
 						"example-upload.php"
 					]
 				}
