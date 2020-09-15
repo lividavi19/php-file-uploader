@@ -36,31 +36,31 @@
 			// check for file errors
 			if ($this->_fileError !== 0) {
 				// extension not allowed
-				$uploadObject = [
+				$uploadInfo = [
 					'uploaded' => false,
 					'message' => "file error(s)"
 				];
-				$this->printJSON($uploadObject);
+				$this->printJSON($uploadInfo);
 			}
 
 			// check for allowed file extensions
 			if (!in_array($this->_fileExtension, $this->_allowedExtensions)) {
 				// extension not allowed
-				$uploadObject = [
+				$uploadInfo = [
 					'uploaded' => false,
 					'message' => "type '{$this->_fileExtension}' files not allowed"
 				];
-				$this->printJSON($uploadObject);
+				$this->printJSON($uploadInfo);
 			}
 
 			// check for max-allowed file size
 			if ($this->_fileSize > $this->_maxAllowedFileSize*(1024*1024)) {
 				// extension not allowed
-				$uploadObject = [
+				$uploadInfo = [
 					'uploaded' => false,
 					'message' => "file size biggr than max-allowed"
 				];
-				$this->printJSON($uploadObject);
+				$this->printJSON($uploadInfo);
 			}
 
 			// handle if file already exists
@@ -72,29 +72,29 @@
 			// upload a file
 			if (move_uploaded_file($this->_tmpDir, "{$this->_pathToFile}/{$this->_fileName}")) {
 				// success file upload
-				$uploadObject = [
+				$uploadInfo = [
 					'uploaded' => true,
 					'message' => "success file upload",
-					'uploadInfo' => [
+					'fileInfo' => [
 						'fileName' => $this->_fileName,
 						'fileType' => $this->_fileType,
 						'fileSize' => $this->_fileSize
 					]
 				];
-				$this->printJSON($uploadObject);
+				$this->printJSON($uploadInfo);
 			} else {
 				// internal error(s) uploading a file
-				$uploadObject = [
+				$uploadInfo = [
 					'uploaded' => false,
 					'message' => "error uploading the file"
 				];
-				$this->printJSON($uploadObject);
+				$this->printJSON($uploadInfo);
 			}
 		}
 
 		// print upload info in json
-		private function printJSON ($json) {
-			echo json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
+		private function printJSON ($uploadInfoObject) {
+			echo json_encode($uploadInfoObject, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 			die();
 		}
 	}
