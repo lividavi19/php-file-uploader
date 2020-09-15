@@ -17,7 +17,7 @@
 		private $_fileExtension;
 
 		// allowed extensions
-		private $_allowedExtensions = ['png', 'jpg', 'jpeg', 'pdf', 'mp3'];
+		private $_allowedExtensions = ['png', 'jpg', 'jpeg', 'gif', 'pdf', 'mp3'];
 		private $_maxAllowedFileSize = 2;
 
 		// constructor
