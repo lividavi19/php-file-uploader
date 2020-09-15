@@ -22,6 +22,16 @@
 
 		// constructor
 		function __construct ($inputFile) {
+			// check if $inputFile is set
+			if (!isset($inputFile)) {
+				// file not set
+				$uploadInfo = [
+					'uploaded' => false,
+					'message' => 'file not set'
+				];
+				$this->printJSON($uploadInfo);
+			}
+
 			$this->_file = $inputFile;
 			$this->_fileName = $this->_file['name'];
 			$this->_fileType = $this->_file['type'];
@@ -85,10 +95,10 @@
 				];
 				$this->printJSON($uploadInfo);
 			} else {
-				// internal error(s) uploading a file
+				// internal error(s) uploading file
 				$uploadInfo = [
 					'uploaded' => false,
-					'message' => "error uploading the file"
+					'message' => "internal error(s) uploading the file"
 				];
 				$this->printJSON($uploadInfo);
 			}
