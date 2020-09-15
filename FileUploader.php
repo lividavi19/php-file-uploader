@@ -75,7 +75,7 @@
 				$uploadObject = [
 					'uploaded' => true,
 					'message' => "success file upload",
-					'fileInfo' => [
+					'uploadInfo' => [
 						'fileName' => $this->_fileName,
 						'fileType' => $this->_fileType,
 						'tmpDir' => $this->_tmpDir,
