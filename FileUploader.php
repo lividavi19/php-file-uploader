@@ -38,7 +38,7 @@
 				// extension not allowed
 				$uploadInfo = [
 					'uploaded' => false,
-					'message' => "file error(s)"
+					'message' => "file error(s) detected"
 				];
 				$this->printJSON($uploadInfo);
 			}
