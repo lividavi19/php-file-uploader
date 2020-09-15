@@ -78,10 +78,7 @@
 					'uploadInfo' => [
 						'fileName' => $this->_fileName,
 						'fileType' => $this->_fileType,
-						'tmpDir' => $this->_tmpDir,
-						'fileError' => $this->_fileError,
-						'fileSize' => $this->_fileSize,
-						'fileExtension' => $this->_fileExtension
+						'fileSize' => $this->_fileSize
 					]
 				];
 				$this->printJSON($uploadObject);
