@@ -92,7 +92,7 @@
 			}
 		}
 
-		// print file info in json
+		// print upload info in json
 		private function printJSON ($json) {
 			echo json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 			die();
