@@ -4,8 +4,8 @@ header('Access-Control-Allow-Origin: *');
 	header('Content-Type: application/json');
 
 	class FileUploader {
-		// storage directory
-		private $_pathToFile = 'files';
+		// storage directory path
+		private $_pathToFile = 'uploads';
 
 		// file properties
 		private $_file;
@@ -21,8 +21,8 @@ header('Access-Control-Allow-Origin: *');
 		private $_maxAllowedFileSize = 2;
 
 		// constructor
-		function __construct ($fileObject) {
-			$this->_file = $fileObject;
+		function __construct ($inputFile) {
+			$this->_file = $inputFile;
 			$this->_fileName = $this->_file['name'];
 			$this->_fileType = $this->_file['type'];
 			$this->_tmpDir = $this->_file['tmp_name'];
@@ -75,7 +75,7 @@ header('Access-Control-Allow-Origin: *');
 				$uploadObject = [
 					'uploaded' => true,
 					'message' => "success file upload",
-						'fileInfo' => [
+					'fileInfo' => [
 						'fileName' => $this->_fileName,
 						'fileType' => $this->_fileType,
 						'tmpDir' => $this->_tmpDir,
