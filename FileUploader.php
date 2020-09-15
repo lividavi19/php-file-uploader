@@ -93,7 +93,7 @@
 		}
 
 		// print file info in json
-		function printJSON ($json) {
+		private function printJSON ($json) {
 			echo json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 			die();
 		}
