@@ -66,7 +66,8 @@
 			// handle if file already exists
 			if (file_exists("{$this->_pathToFile}/{$this->_fileName}")) {
 				// file exists, re-assign file name
-				$this->_fileName = str_shuffle(md5(microtime().time())).'.'.$this->_fileExtension;
+				$randomString = str_shuffle(md5(microtime().time()));
+				$this->_fileName = "{$randomString}.{$this->_fileExtension}";
 			}
 
 			// upload a file
@@ -78,7 +79,8 @@
 					'fileInfo' => [
 						'fileName' => $this->_fileName,
 						'fileType' => $this->_fileType,
-						'fileSize' => $this->_fileSize
+						'fileSize' => $this->_fileSize,
+						'filePath' => "{$this->_pathToFile}/"
 					]
 				];
 				$this->printJSON($uploadInfo);
