@@ -5,7 +5,7 @@
 
 	class FileUploader {
 		// storage directory path
-		private $_pathToFile = 'uploads';
+		private $_pathToFile = 'uploads-folder-path';
 
 		// file properties
 		private $_file;
