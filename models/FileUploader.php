@@ -4,7 +4,7 @@
     header('Access-Control-Allow-Origin: '.(!empty($_SERVER['HTTPS']) ? 'https' : 'http').'://'.$_SERVER['SERVER_NAME']);
 
     // require loaders
-    require_once $_SERVER['DOCUMENT_ROOT'].'/devi/php-file-uploader/autoloaders/load_helpers.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/autoloaders/load_helpers.php';
 
     class FileUploader {
         private $file;
@@ -30,7 +30,7 @@
             @$this->file_error = $this->file['error'];
             @$this->file_size = $this->file['size'];
             $this->file_extension = pathinfo($this->file_name, PATHINFO_EXTENSION);
-            $this->path_to_folder = $_SERVER['DOCUMENT_ROOT'].'/devi/php-file-uploader/upload-folder';
+            $this->path_to_folder = $_SERVER['DOCUMENT_ROOT'].'/upload-folder';
 
             // handle empty file inputs
             $this->handleEmptyFile();
