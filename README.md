@@ -1,5 +1,6 @@
 # PHP File Uploader
 This is a utility script that helps in uploading the file to the server using PHP.
+![People uploading files to server](https://cdni.iconscout.com/illustration/premium/thumb/upload-file-to-cloud-4487405-3722766.png)
 
 ## Installation
 Include this file in your code.
@@ -16,7 +17,7 @@ include_once "file-uploader.php";
 After including the `file-uploader.php` in your code, you need to invoke `upload` function by passing the `$file` and `$uploadFolder` arguments to it as shown below;
 
 ```
-upload ($file, $uploadFolder)
+upload ($file, $uploadFolder);
 ```
 
 #### $file
