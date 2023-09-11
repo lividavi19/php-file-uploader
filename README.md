@@ -19,11 +19,11 @@ After including the `file-uploader.php` in your code, you need to invoke `upload
 upload ($file, $uploadFolder)
 ```
 
-### $file
+#### $file
 This should be the first argument, it is the file you are trying to upload.
 This argument is mandatory.
 
-### $uploadFolder
+#### $uploadFolder
 This should be the second argument of the function.
 It specifies the folder you want to save your file into. This is an option argument, if not specified the script will attempt to upload the file to the `current-working-directory`.
 
