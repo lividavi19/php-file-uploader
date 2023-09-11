@@ -12,8 +12,8 @@ Or;
 include_once "file-uploader.php";
 ```
 
-## Usage
-Invoke `upload ($file, $uploadFolder)` function passing the following arguments;
+## Arguments parameters
+After including the `file-uploader.php` in your code, you need to invoke `upload ($file, $uploadFolder)` function by passing the `$file` and `$uploadFolder` arguments to it.
 ### $file
 This should be the first argument, it is the file you are trying to upload.
 This argument is mandatory.
