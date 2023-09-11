@@ -22,7 +22,7 @@
 		}
 
 		// Get the file name
-		// TODO : Trim these characters [DOT, backslash, and forward slash] from a file name
+		// Trim these characters [DOT, backslash, and forward slash] from a file name
 		$fileName = trim($file["name"], "./\\");
 
 		// Extract file extension from file name
@@ -80,7 +80,7 @@
 			}
 		}
 
-		// Folder name CAN NOT  START or END with a DOT, forward-slash or back-slash
+		// Trim these characters [DOT, backslash, and forward slash] from a folder name
 		$uploadFolder = trim($uploadFolder, "./\\");
 
 		// A folder name CAN NOT CONTAIN any of the below characters
