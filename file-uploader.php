@@ -84,7 +84,7 @@
 		$uploadFolder = trim($uploadFolder, "./\\");
 
 		// Following characters hold special meaning in Windows and Linux OS
-		// ["?", ":", "\"", "<", ">", "|", "*", "/", "\", "."]
+		// ["?", ":", "\"", "<", ">", "|", "*", "/", "\\", "."]
 		// Characters [".", "/", "\\"] already trimmed above
 		// A folder name CAN NOT CONTAIN any of the below characters
 		$ILLEGAL_CHARACTERS = ["?", ":", "\"", "<", ">", "|", "*"];
