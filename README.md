@@ -27,9 +27,9 @@ This argument is mandatory.
 This should be the second argument of the function.
 It specifies the folder you want to save your file into. This is an option argument, if not specified the script will attempt to upload the file to the `current-working-directory`.
 
-## Upload success
+## Successfull Upload
 Upon successfull upload of the file, this function returns the name of the file `$fileName` with it's extension appended to it. Such as `uploaded-document.pdf`
 You can further use this `$fileName` in you code Ex. saving it into the database etc.
 
-## Upload fail
+## Unsuccessfull Upload
 If upload was not successful, the function will return an empty string `""`
