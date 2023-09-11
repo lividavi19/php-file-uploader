@@ -1,4 +1,4 @@
-# PHP file uploader
+# PHP File Uploader
 This is a utility script that helps in uploading the file to the server using PHP.
 
 ## Installation
