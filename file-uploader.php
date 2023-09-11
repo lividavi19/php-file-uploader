@@ -83,9 +83,10 @@
 		// Trim these characters [DOT, backslash, and forward slash] from a folder name
 		$uploadFolder = trim($uploadFolder, "./\\");
 
+		// Following characters hold special meaning in Windows and Linux OS
+		// ["?", ":", "\"", "<", ">", "|", "*", "/", "\", "."]
+		// Characters [".", "/", "\\"] already trimmed above
 		// A folder name CAN NOT CONTAIN any of the below characters
-		// These characters mainly applies for the Windows-OS
-		// Characters [".", "/", "\\"] already handled above
 		$ILLEGAL_CHARACTERS = ["?", ":", "\"", "<", ">", "|", "*"];
 		
 		for ($i = 0; $i < strlen($uploadFolder); $i++) {
