@@ -24,13 +24,13 @@ upload ($file, $uploadFolder);
 #### $file
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
 > [!IMPORTANT]
-> If not specified, function returns empty string
+> If not specified, function returns empty string `""` :point_down:
 ```
 // Calling upload() with no $file argument
 upload ();
 ```
 > [!WARNING]
-> Function produces an error if this argument is not a file.
+> Function produces an error if this argument is not a file :point_down:
 ```
 // Calling upload() with a non-file as the first argument
 $file = "String";
