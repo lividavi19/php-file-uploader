@@ -23,7 +23,7 @@ upload ($file, $uploadFolder);
 ```
 #### $file
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
-> [!INFORMATION]
+> [!IMPORTANT]
 > If not specified, function returns empty string
 > [!WARNING]
 > Function produces an error if this argument is not a file.
