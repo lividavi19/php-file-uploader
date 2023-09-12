@@ -8,7 +8,7 @@
 		// Handle for empty, non-submitted files
 		if ($file == NULL) {
 			// Client did not submit a file
-			// echo "File can not be empty!";
+			// File can not be empty!
 			return "";
 		}
 
@@ -17,7 +17,7 @@
 			// $file["error"] may produce below fatal-type-error
 			// Fatal error: Uncaught TypeError: Cannot access offset of type string on string
 			// To handle above issue, ensure that the $file is of type array since it should come from $_FILES (array) superglobal
-			// echo "File errors detected!";
+			// File errors detected!
 			return "";
 		}
 
@@ -35,7 +35,7 @@
 
 		// Check if file estension is not allowed
 		if (!in_array($fileExtension, $EXTENSIONS_ALLOWED, false)) {
-			// echo "{$fileExtension} files not allowed!";
+			// File extension not allowed!
 			return "";
 		}
 
@@ -50,7 +50,7 @@
 
 		// Handle for larger file size
 		if ($fileSize > $MAX_SIZE_ALLOWED) {
-			// echo "File too big, try a smaller sized-file!";
+			// File bigger than the max-allowed-size!
 			return "";
 		}
 
@@ -63,7 +63,7 @@
 			// getcwd() may return FALSE on failure
 			// Handle if could not get the current-working-directory
 			if (!$uploadFolder) {
-				// echo "Could not get the current working directory!";
+				// Could not get the current working directory!
 				return "";
 			}
 
@@ -72,10 +72,10 @@
 
 			// Attempt to move the file into the current-working-directory
 			if (move_uploaded_file($file["tmp_name"], "{$uploadFolder}/{$fileName}")) {
-				// echo "File upload success [Current working directory]";
+				// File upload success [Current working directory]
 				return "{$fileName}";
 			} else {
-				// echo "File upload failed [Current working directory]";
+				// File upload failed [Current working directory]
 				return "";
 			}
 		}
@@ -91,7 +91,7 @@
 		
 		for ($i = 0; $i < strlen($uploadFolder); $i++) {
 			if (in_array($uploadFolder[$i], $ILLEGAL_CHARACTERS)) {
-				// echo "Folder name CAN NOT CONTAIN <b>{$uploadFolder[$i]}</b> character";
+				// Folder name CAN NOT CONTAIN <b>{$uploadFolder[$i]}</b> character!
 				return "";
 			}
 		}
@@ -100,7 +100,7 @@
 		if (!is_dir($uploadFolder)) {
 			if (!mkdir($uploadFolder, 0511, true)) {
 				// mkdir() function above may produce a "folder-not-found" warning
-				// echo "Failed to create folder {$uploadFolder}!";
+				// Failed to create folder {$uploadFolder}!
 				return "";
 			}
 		}
@@ -110,10 +110,10 @@
 
 		// Attempt to upload the $fileName to $uploadFolder
 		if (move_uploaded_file($file["tmp_name"], "{$uploadFolder}/{$fileName}")) {
-			// echo "File upload success [Specified folder]";
+			// File upload success [Specified folder]
 			return "{$fileName}";
 		} else {
-			// echo "File upload failed [Specified folder]";
+			// File upload failed [Specified folder]
 			return "";
 		}
 	}
