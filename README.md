@@ -24,6 +24,8 @@ upload ($file, $uploadFolder);
 
 #### $file
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
+> [!WARNING]
+> Function produce error if this argument is not a file.
 
 #### $uploadFolder
 This should be the second argument of the function. It specifies the folder you want to save your file into. This is an option argument.
