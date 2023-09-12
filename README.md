@@ -16,6 +16,9 @@ include_once "file-uploader.php";
 After including the `file-uploader.php` in your code, you need to invoke `upload` function, passing to it the `$file` and `$uploadFolder` arguments :point_down:
 
 ```
+$file = $_FILES["html_file_input"];
+$uploadFolder = "my_uploading_folder";
+
 upload ($file, $uploadFolder);
 ```
 
