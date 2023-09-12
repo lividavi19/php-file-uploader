@@ -21,7 +21,6 @@ $uploadFolder = "my_uploading_folder";
 
 upload ($file, $uploadFolder);
 ```
-
 #### $file
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
 > [!WARNING]
