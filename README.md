@@ -26,13 +26,15 @@ This should be the first argument, it is the file you are trying to upload. This
 > [!IMPORTANT]
 > If not specified, function returns empty string
 ```
-upload (); // Calling upload() with no $file argument
+// Calling upload() with no $file argument
+upload ();
 ```
 > [!WARNING]
 > Function produces an error if this argument is not a file.
 ```
+Calling upload() with a non-file as the first argument
 $file = "String";
-upload ($file); // Calling upload() with a non-file as the first argument
+upload ($file); //
 ```
 
 
