@@ -3,7 +3,7 @@ This is a utility script that helps in uploading the file to the server using PH
 ![People uploading files to server](https://cdni.iconscout.com/illustration/premium/thumb/upload-file-to-cloud-4487405-3722766.png)
 
 ## Installation
-To start uploading files with this library, download the `file-uploader.php` file, then include it in your code. Such as below ;
+To start uploading files with this library, download the `file-uploader.php` file, then include it in your code :point_down:
 ```
 require_once "file-uploader.php";
 ```
