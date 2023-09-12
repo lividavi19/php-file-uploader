@@ -32,9 +32,9 @@ upload ();
 > [!WARNING]
 > Function produces an error if this argument is not a file.
 ```
-Calling upload() with a non-file as the first argument
+// Calling upload() with a non-file as the first argument
 $file = "String";
-upload ($file); //
+upload ($file);
 ```
 
 
