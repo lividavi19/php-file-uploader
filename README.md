@@ -27,7 +27,7 @@ This should be the first argument, it is the file you are trying to upload. This
 
 #### $uploadFolder
 This should be the second argument of the function. It specifies the folder you want to save your file into. This is an option argument.
-> [!note] if not specified the script will attempt to upload the file to the `current-working-directory`.
+> [!NOTE] if not specified the script will attempt to upload the file to the `current-working-directory`.
 
 ## Successful Upload
 Upon successfull upload of the file, this function returns name of the file with it's extension appended to it, example `uploaded-document.pdf`. You can further-use this filename in your code, for-instance saving it to the database etc.
