@@ -25,7 +25,15 @@ upload ($file, $uploadFolder);
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
 > [!IMPORTANT]
 > If not specified, function returns empty string
+```
+upload (); // Calling upload() with no $file argument
+```
+> [!WARNING]
 > Function produces an error if this argument is not a file.
+```
+$file = "String";
+upload ($file); // Calling upload() with a non-file as the first argument
+```
 
 
 #### $uploadFolder
