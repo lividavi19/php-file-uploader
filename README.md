@@ -7,7 +7,7 @@ To start uploading files with this library, download the `file-uploader.php` fil
 ```
 require_once "file-uploader.php";
 ```
-Or;
+Or :point_down:
 ```
 include_once "file-uploader.php";
 ```
