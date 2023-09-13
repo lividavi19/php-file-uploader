@@ -28,7 +28,8 @@ This should be the first argument, it is the file you are trying to upload. This
 ```
 // Calling upload() with no $file argument
 upload ();
-
+```
+```
 // Calling upload() with a non-file as the first argument
 $file = "String";
 upload ($file);
