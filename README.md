@@ -1,5 +1,5 @@
 # PHP File Uploader :file_folder: :open_file_folder:
-This is a utility script for uploading files to the server using PHP prgramming language.
+This is a utility script that helps in uploading the file to the server using PHP.
 ![People uploading files to server](https://cdni.iconscout.com/illustration/premium/thumb/upload-file-to-cloud-4487405-3722766.png)
 
 ## Installation
@@ -24,14 +24,11 @@ upload ($file, $uploadFolder);
 #### $file
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
 > [!IMPORTANT]
-> If not specified, function returns empty string `""` :point_down:
+> This argument mut be a file, otherwise the function returns an empty string `""` :point_down:
 ```
 // Calling upload() with no $file argument
 upload ();
-```
-> [!WARNING]
-> Function produces an error if this argument is not a file :point_down:
-```
+
 // Calling upload() with a non-file as the first argument
 $file = "String";
 upload ($file);
