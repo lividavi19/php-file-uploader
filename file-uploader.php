@@ -115,7 +115,8 @@
 		}
 
 
-		// Ensure the specified folder-name does exist, if not create it
+		// If a client supplied a name for $uploadFolder
+		// Ensure the supplied folder-name does exist, if not create it
 		if (!is_dir($uploadFolder)) {
 			if (!mkdir($uploadFolder, 0511, true)) {
 				// mkdir() function above may produce a "folder-not-found" warning
