@@ -31,8 +31,8 @@ upload ();
 ```
 ```
 // Calling upload() with a non-file as the first argument
-$file = "String";
-upload ($file);
+$myVariable = "String type";
+upload ($myVariable);
 ```
 
 
