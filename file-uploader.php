@@ -106,10 +106,10 @@
 
 			// Attempt to move the file into the current-working-directory
 			if (move_uploaded_file($file["tmp_name"], "{$uploadFolder}/{$fileName}")) {
-				// File upload success [Current working directory]
+				// File upload [to the current working directory] success
 				return "{$fileName}";
 			} else {
-				// File upload failed [Current working directory]
+				// File upload [to the current working directory] failed
 				return "";
 			}
 		}
@@ -131,10 +131,10 @@
 
 		// Attempt to upload the $fileName to $uploadFolder
 		if (move_uploaded_file($file["tmp_name"], "{$uploadFolder}/{$fileName}")) {
-			// File upload success [Specified folder]
+			// File upload [to specified folder]  success
 			return "{$fileName}";
 		} else {
-			// File upload failed [Specified folder]
+			// File upload [to specified folder] failed
 			return "";
 		}
 	}
