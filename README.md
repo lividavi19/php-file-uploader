@@ -24,7 +24,7 @@ upload ($file, $uploadFolder);
 #### $file
 This should be the first argument, it is the file you are trying to upload. This argument is mandatory.
 > [!IMPORTANT]
-> This argument mut be a file, otherwise the function returns an empty string `""` :point_down:
+> This argument mut be a file, otherwise the function returns an empty string `""` as shown in the next two code snippets :point_down:
 ```
 // Calling upload() with no $file argument
 upload ();
