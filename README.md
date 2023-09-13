@@ -26,11 +26,11 @@ This should be the first argument, it is the file you are trying to upload. This
 > [!IMPORTANT]
 > This argument mut be a file, otherwise the function returns an empty string `""` as shown in the next two code snippets :point_down:
 ```
-// Calling upload() with no $file argument
+// Calling upload() with no argument
 upload ();
 ```
 ```
-// Calling upload() with a non-file as the first argument
+// Calling upload() with a non-file as an argument
 $myVariable = "String type";
 upload ($myVariable);
 ```
