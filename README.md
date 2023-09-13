@@ -1,5 +1,5 @@
 # PHP File Uploader :file_folder: :open_file_folder:
-This is a utility script that helps in uploading the file to the server using PHP.
+This is a utility script for uploading files to the server using PHP prgramming language.
 ![People uploading files to server](https://cdni.iconscout.com/illustration/premium/thumb/upload-file-to-cloud-4487405-3722766.png)
 
 ## Installation
