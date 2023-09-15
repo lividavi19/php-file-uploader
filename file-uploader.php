@@ -3,12 +3,13 @@
 		Livingstone
 		+255 687 949 808
 	*/
-	function upload ($file = NULL, $uploadFolder = NULL) : string {
+	function upload ($file = null, $uploadFolder = null) : string {
 
-		// Ensure the file was submitted by client
-		if ($file == NULL) {
-			// Client did not submit a file
-			// File was not specified
+		// Ensure the file was submitted
+		// Ensure the submitted file not empty
+		// Ensure the submitted file is not null
+		if (!isset($file) || empty($file) || $file == null) {
+			// File not specified
 			return "";
 		}
 
@@ -18,23 +19,20 @@
 			return "";
 		}
 
-		// Ensure file has an "error" field (files uploaded via a form)
-		if (!isset($file["error"])) {
-			// Error field not presents
+		// Ensure file[error] is present (files uploaded via a form)
+		// Ensure file[error] is false (0 in this case)
+		if (!isset($file["error"]) || $file["error"]) {
+			// Property file[error] not present
+			// File error == true
+			// File errors detected
 			return "";
 		}
 
-		// Ensure the file has a "tmp_name" field
+		// Ensure the file has a "tmp_name" property
 		// Ensure the file at "tmp_name" is indeed a valid-uploaded-file
 		// Ensure that the file was uploaded through an HTTP POST request
 		if (!isset($file["tmp_name"]) || !is_uploaded_file($file["tmp_name"])) {
-			// File not valid
-			return "";
-		}
-
-		// Handle for file-related errors
-		if ($file["error"]) {
-			// File errors detected
+			// Not a valid uploaded file
 			return "";
 		}
 
@@ -89,7 +87,7 @@
 
 		// In cases when name for $uploadFolder not specified
 		// Attempt moving the $file to the current-working-directory
-		if ($uploadFolder == NULL) {
+		if ($uploadFolder == null) {
 			// Attempt to get the current-working-directory
 			$uploadFolder = getcwd();
 
