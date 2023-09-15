@@ -99,7 +99,7 @@
 			}
 
 			// Ensure the filename does not already exist in the upload-folder
-			// If so assign a random name for file
+			// If so assign a new, random name for file
 			$fileName = file_exists("{$uploadFolder}/{$fileName}") ? str_shuffle(md5(microtime().time())).".{$fileExtension}" : $fileName;
 
 			// Attempt to move the file into the current-working-directory
@@ -124,7 +124,7 @@
 		}
 
 		// Ensure the filename does not already exist in the upload-folder
-		// If so assign a random name for file
+		// If so assign a new, random name for file
 		$fileName = file_exists("{$uploadFolder}/{$fileName}") ? str_shuffle(md5(microtime().time())).".{$fileExtension}" : $fileName;
 
 		// Attempt to upload the $fileName to $uploadFolder
