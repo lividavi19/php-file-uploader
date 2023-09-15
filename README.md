@@ -35,7 +35,6 @@ $myVariable = "String type";
 upload ($myVariable);
 ```
 
-
 #### $uploadFolder
 This should be the second argument of the function. It specifies the folder you want to save your file into. This is an option argument.
 > [!NOTE]
