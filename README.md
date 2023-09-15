@@ -42,8 +42,7 @@ This should be the second argument of the function. It specifies the folder you 
 > If not specified the script will attempt to upload the file to the `current-working-directory`.
 
 ## Successful Upload
-Upon successfull upload of the file, this function returns name of the file with it's extension appended to it, example `uploaded-document.pdf`.
-Note in the code snippet below, the `$fileName` will have name of the uploaded file. You can further-use this filename in your code, for-instance saving it to the database etc :point_down:
+Upon successfull upload of the file, this function returns name of the file with it's extension appended to it, example `uploaded-document.pdf`. Note in the code snippet below, the `$fileName` will have name of the uploaded file. You can further-use this filename in your code, for-instance saving it to the database etc :point_down:
 ```
 $file = $_FILES["html_file_input"];
 
@@ -52,8 +51,7 @@ $fileName = upload ($file);
 ```
 
 ## Unsuccessful Upload
-If upload was not successful, the function will return an empty string `""`.
-Note in the code snippet below, the `$fileName` will have an empty string stored in it. You can proceed with the execution of your code depending on this value, example prompting users that file upload failed :point_down:
+If upload was not successful, the function will return an empty string `""`. Note in the code snippet below, the `$fileName` will have an empty string stored in it. You can proceed with the execution of your code depending on this value, example prompting users that file upload failed :point_down:
 ```
 // The upload() function expects `a file as the first argument`
 // Since we are calling the function with a string as the first argument
