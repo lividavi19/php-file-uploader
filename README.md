@@ -58,5 +58,5 @@ If upload was not successful, the function will return an empty string `""`. Not
 // Then upload process will fail, and the upload() function returns an empty string :point_down:
 
 $myVariable = "String type";
-$fileName = upload ($myVariable); // empty string `""`
+$fileName = upload ($myVariable); // empty string ""
 ```
