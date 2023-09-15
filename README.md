@@ -52,7 +52,7 @@ $fileName = upload ($file);
 ## Unsuccessful Upload
 If upload was not successful, the function will return an empty string `""`. Note in the code snippet below, the `$fileName` will have an empty string stored in it. You can proceed with the execution of your code depending on this value, for-instance prompting users that file upload failed, :point_down:
 ```
-// The upload() function expects `a file as the first argument`
+// The upload() function expects a file as the first argument
 // Since we are calling the function with a string as the first argument
 // Then upload process will fail, and the upload() function returns an empty string :point_down:
 
