@@ -13,7 +13,7 @@ include_once "file-uploader.php";
 ```
 
 ## Arguments
-After including the `file-uploader.php` in your code, you need to invoke `upload` function, passing to it the `$file` and `$uploadFolder` arguments :point_down:
+After including the `file-uploader.php` in your code, you need to invoke `upload` function, passing to it the `$file` argument and an optional `$uploadFolder` argument :point_down:
 
 ```
 $file = $_FILES["html_file_input"];
