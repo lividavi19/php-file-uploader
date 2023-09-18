@@ -8,7 +8,7 @@
 		// Ensure the file is set (and not null)
 		// Ensure the submitted file is not empty
 		if (!isset($file) || empty($file)) {
-			// File not specified
+			// File not specified, or empty
 			return "";
 		}
 
