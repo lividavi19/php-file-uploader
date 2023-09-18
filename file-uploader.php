@@ -84,9 +84,9 @@
 		}
 
 
-		// In cases when name for $uploadFolder not specified
+		// In cases $uploadFolder not specified or empty
 		// Attempt moving the $file to the current-working-directory
-		if ($uploadFolder == null) {
+		if (empty($uploadFolder)) {
 			// Attempt to get the current-working-directory
 			$uploadFolder = getcwd();
 
