@@ -85,8 +85,8 @@ if ($fileName) {
 	echo "Upload failed!";
 }
 ```
-***Example output*** :point_right:
-*Uploaded file is **uploadedFileName.png***
+:point_right: :point_right: :point_right:
+_Uploaded file is **uploadedFileName.png**_
 
 
 ## Unsuccessful Upload
@@ -108,5 +108,5 @@ if ($fileName) {
 	echo "Upload failed!";
 }
 ```
-***Output*** :point_right:
-*Upload failed!*
+:point_right: :point_right: :point_right:
+_Upload failed!_
