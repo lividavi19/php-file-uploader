@@ -1,8 +1,6 @@
 <?php
-	/*
-		Livingstone
-		+255 687 949 808
-	*/
+	// Livingstone +255 687 949 808
+
 	function upload ($file = null, $uploadFolder = null) : string {
 
 		// Ensure the file is set (and not null)
