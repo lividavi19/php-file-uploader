@@ -54,7 +54,7 @@ To support different file types follow steps below :point_down:
 - Initialize it to an array of strings, representing file types you need to support
 - Following example supports only `PNG JPG JPEG` image files :point_down:
 ```
-$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF"];
+$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG"];
 ```
 
 ### Maximum File Size
