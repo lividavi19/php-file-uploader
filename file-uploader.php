@@ -46,9 +46,12 @@
 		$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF"];
 
 		// Ensure the file estension is allowed
-		if (!in_array($fileExtension, $EXTENSIONS_ALLOWED, false)) {
-			// File extension not allowed
-			return "";
+		foreach ($EXTENSIONS_ALLOWED as $allowed_file_extension) {
+			// Compare two extensions, disregarding their cases
+			if (strcasecmp($allowed_file_extension, $fileExtension) !== 0) {
+				// File extension not allowed
+				return "";
+			}
 		}
 
 		// Get file size (Given in Bytes)
