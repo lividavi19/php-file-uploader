@@ -38,7 +38,7 @@
 		$fileName = trim($file["name"], "./\\");
 
 		// Extract file extension from file name
-		$fileExtension = strtoupper(pathinfo($fileName, PATHINFO_EXTENSION));
+		$fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
 		// Define list of allowed file extensions.
 		// You can modify this list by add more extensions or remove existing extensions.
