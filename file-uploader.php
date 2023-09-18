@@ -5,10 +5,9 @@
 	*/
 	function upload ($file = null, $uploadFolder = null) : string {
 
-		// Ensure the file was submitted
-		// Ensure the submitted file not empty
-		// Ensure the submitted file is not null
-		if (!isset($file) || empty($file) || $file == null) {
+		// Ensure the file is set (and not null)
+		// Ensure the submitted file is not empty
+		if (!isset($file) || empty($file)) {
 			// File not specified
 			return "";
 		}
@@ -19,11 +18,11 @@
 			return "";
 		}
 
-		// Ensure file[error] is present (files uploaded via a form)
-		// Ensure file[error] is false (0 in this case)
+		// Ensure $file[error] is present (files uploaded via a form)
+		// Ensure $file[error] is false (0 in this case)
 		if (!isset($file["error"]) || $file["error"]) {
-			// Property file[error] not present
-			// File error == true
+			// Property "error" not present
+			// $file[error] == 1
 			// File errors detected
 			return "";
 		}
@@ -46,7 +45,7 @@
 		// Define list of allowed file extensions.
 		// You can modify this list by add more extensions or remove existing extensions.
 		// TODO : Make $EXTENSIONS_ALLOWED variable a constant?
-		$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF", "MP3", "MP4"];
+		$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF"];
 
 		// Ensure the file estension is allowed
 		if (!in_array($fileExtension, $EXTENSIONS_ALLOWED, false)) {
@@ -99,7 +98,7 @@
 			}
 
 			// Ensure the filename does not already exist in the upload-folder
-			// If so assign a new, random name for file
+			// If so assign a new, random name for the file
 			$fileName = file_exists("{$uploadFolder}/{$fileName}") ? str_shuffle(md5(microtime().time())).".{$fileExtension}" : $fileName;
 
 			// Attempt to move the file into the current-working-directory
@@ -124,7 +123,7 @@
 		}
 
 		// Ensure the filename does not already exist in the upload-folder
-		// If so assign a new, random name for file
+		// If so assign a new, random name for the file
 		$fileName = file_exists("{$uploadFolder}/{$fileName}") ? str_shuffle(md5(microtime().time())).".{$fileExtension}" : $fileName;
 
 		// Attempt to upload the $fileName to $uploadFolder
