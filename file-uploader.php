@@ -38,7 +38,7 @@
 		$fileName = trim($file["name"], "./\\");
 
 		// Extract file extension from file name
-		$fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+		$fileExtension = strtoupper(pathinfo($fileName, PATHINFO_EXTENSION));
 
 		// Define list of allowed file extensions.
 		// You can modify this list by add more extensions or remove existing extensions.
@@ -46,12 +46,9 @@
 		$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF"];
 
 		// Ensure the file estension is allowed
-		foreach ($EXTENSIONS_ALLOWED as $allowed_file_extension) {
-			// Compare two extensions, disregarding their cases
-			if (strcasecmp($allowed_file_extension, $fileExtension) !== 0) {
-				// File extension not allowed
-				return "";
-			}
+		if (!in_array($fileExtension, $EXTENSIONS_ALLOWED, false)) {
+			// File extension not allowed
+			return "";
 		}
 
 		// Get file size (Given in Bytes)
