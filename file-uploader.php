@@ -45,9 +45,9 @@
 		// TODO : Make $EXTENSIONS_ALLOWED variable a constant?
 		$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF"];
 
-		// Set a boolean-flag
+		// Set $is_allowed boolean-flag
 		// This flag will tell whether an extension is allowed
-		// Loop through the list of allowed extensions, compare element with file extension
+		// Loop through the list of allowed extensions, compare each element with file extension
 		// Set $is_allowed = true if file extension is in the list of allowed file extensions, then break out of the loop
 		$is_allowed = false;
 		foreach ($EXTENSIONS_ALLOWED as $value) {
