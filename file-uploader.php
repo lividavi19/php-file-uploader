@@ -38,15 +38,27 @@
 		$fileName = trim($file["name"], "./\\");
 
 		// Extract file extension from file name
-		$fileExtension = strtoupper(pathinfo($fileName, PATHINFO_EXTENSION));
+		$fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
 		// Define list of allowed file extensions.
 		// You can modify this list by add more extensions or remove existing extensions.
 		// TODO : Make $EXTENSIONS_ALLOWED variable a constant?
 		$EXTENSIONS_ALLOWED = ["PNG", "JPG", "JPEG", "PDF"];
 
+		// Set a boolean-flag
+		// This flag will tell whether an extension is allowed
+		// Loop through the list of allowed extensions, compare element with file extension
+		// Set $is_allowed = true if file extension is in the list of allowed file extensions, then break out of the loop
+		$is_allowed = false;
+		foreach ($EXTENSIONS_ALLOWED as $value) {
+			if (strcasecmp($fileExtension, $value) === 0) {
+				$is_allowed = true;
+				break;
+			}
+		}
+
 		// Ensure the file estension is allowed
-		if (!in_array($fileExtension, $EXTENSIONS_ALLOWED, false)) {
+		if (!$is_allowed) {
 			// File extension not allowed
 			return "";
 		}
