@@ -2,17 +2,11 @@
 	// Livingstone +255 687 949 808
 
 	function upload ($file = null, $uploadFolder = null) : string {
-
-		// Ensure the file is set (and not null)
-		// Ensure the submitted file is not empty
-		if (!isset($file) || empty($file)) {
-			// File not specified, or empty
-			return "";
-		}
-
+		
+		// Ensure the file is submitted, and is not empty
 		// Ensure the file is an array ($_FILES array superglobal)
-		if (!is_array($file)) {
-			// Not an array
+		if (empty($file) || !is_array($file)) {
+			// File empty, or not an array
 			return "";
 		}
 
@@ -28,7 +22,7 @@
 		// Ensure the file has a "tmp_name" property
 		// Ensure the file at "tmp_name" is indeed a valid-uploaded-file
 		// Ensure that the file was uploaded through an HTTP POST request
-		if (!isset($file["tmp_name"]) || !is_uploaded_file($file["tmp_name"])) {
+		if (empty($file["tmp_name"]) || !is_uploaded_file($file["tmp_name"])) {
 			// Not a valid uploaded file
 			return "";
 		}
